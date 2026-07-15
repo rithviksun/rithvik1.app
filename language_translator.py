@@ -10,14 +10,14 @@ st.write("Translates English into different languages")
 def load_model():
     return pipeline(
         "translation",
-        model="Helsinki-NLP.opus-mt-en-fr"
+        model="Helsinki-NLP/opus-mt-en-fr"
     )
 translator = load_model()
 languages = {
-    "French": "Helsinki-NLP.opus-mt-en-fr",
-    "German": "Helsinki-NLP.opus-mt-en-de",
-    "Spanish": "Helsinki-NLP.opus-mt-en-es",
-    "Italian": "Helsinki-NLP.opus-mt-en-it",
+    "French": "Helsinki-NLP/opus-mt-en-fr",
+    "German": "Helsinki-NLP/opus-mt-en-de",
+    "Spanish": "Helsinki-NLP/opus-mt-en-es",
+    "Italian": "Helsinki-NLP/opus-mt-en-it",
 }
 
 language = st.selectbox(
