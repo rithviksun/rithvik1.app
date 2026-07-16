@@ -6,9 +6,14 @@ st.set_page_config(page_title="Intent Extractor", page_icon="🧠")
 st.title("🧠 Intent and Entity Extractor")
 st.write("Extract intents and entities from a sentence using OpenAI.")
 
-try:
-    client = OpenAI(api_key=st.secrets["OpenAI_Key"])
-except Exception:
+api_key = st.secrets.get("OpenAI_Key") if hasattr(st, "secrets") else None
+
+if api_key:
+    try:
+        client = OpenAI(api_key=api_key)
+    except Exception:
+        client = None
+else:
     client = None
 
 
