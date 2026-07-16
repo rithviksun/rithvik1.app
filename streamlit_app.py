@@ -21,18 +21,17 @@ st.markdown(
 )
 
 apps = [
-    ("Story Generator", "📚", "Generate a custom story with GPT-2.", "pages/01_story_generator.py"),
-    ("Language Translator", "🌐", "Translate English text into several languages.", "pages/02_language_translator.py"),
-    ("Weather Bot", "⛅", "Check the weather and hear the forecast aloud.", "pages/03_weather_bot.py"),
-    ("Intent Extractor", "🧠", "Extract intents and entities from your text.", "pages/04_intent_extractor.py"),
+    ("Story Generator", "📚", "Generate a custom story with GPT-2.", "#story-generator"),
+    ("Language Translator", "🌐", "Translate English text into several languages.", "#language-translator"),
+    ("Weather Bot", "⛅", "Check the weather and hear the forecast aloud.", "#weather-bot"),
+    ("Intent Extractor", "🧠", "Extract intents and entities from your text.", "#intent-extractor"),
 ]
 
-for title, icon, description, page_path in apps:
+for title, icon, description, page_hash in apps:
     st.markdown(f'<div class="app-card">', unsafe_allow_html=True)
     st.subheader(f"{icon} {title}")
     st.write(description)
-    if st.button(f"Open {title}", key=f"open_{title.replace(' ', '_').lower()}"):
-        st.switch_page(page_path)
+    st.markdown(f"[Open {title}]({page_hash})")
     st.markdown("</div>", unsafe_allow_html=True)
 
-st.info("Each app also appears in the sidebar as its own Streamlit page URL.")
+st.info("Each app is also listed in the sidebar as its own Streamlit page URL.")
