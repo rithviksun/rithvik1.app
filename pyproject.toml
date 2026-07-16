@@ -1,11 +1,16 @@
 [project]
-name = "blank-app-template"
+name = "rithvik1-app"
 version = "0.1.0"
-description = "A simple Streamlit app template."
+description = "A Streamlit AI utility hub with story generation, translation, weather, and intent extraction tools."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "streamlit>=1.59.2",
+    "transformers>=4.44.0",
+    "torch>=2.5.0",
+    "openai>=1.57.0",
+    "requests>=2.32.0",
+    "gTTS>=2.5.0",
 ]
 
 [tool.uv]
