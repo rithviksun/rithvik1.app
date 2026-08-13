@@ -5,11 +5,11 @@ description = "A Streamlit AI utility hub with story generation, translation, we
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "streamlit>=1.59.2",
-    "transformers>=4.44.0",
+    "streamlit>=1.61.1",
+    "transformers>=5.15.0",
     "torch>=2.5.0",
-    "openai>=1.57.0",
-    "requests>=2.32.0",
+    "openai>=2.53.0",
+    "requests>=2.34.2",
     "gTTS>=2.5.0",
 ]
 
